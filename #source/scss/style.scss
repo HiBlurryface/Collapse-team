@@ -1,0 +1,110 @@
+@import "_styles";
+@import "_header";
+@import "_footer";
+
+// header 
+.header {
+    background: #1a1a1a;
+}
+// team
+.team {
+    &__title {
+        @extend %title;
+        padding: 170px 0 20px 0;
+        @media (max-width: 768px) {
+            padding: 150px 0 20px 0;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 880px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__col {
+        @media (min-width: 881px) {
+            &:first-child {
+                margin-right: 60px;
+            }
+        }
+        @media (max-width: 880px) {
+            &:first-child {
+                margin-bottom: 180px;
+            }
+        }
+        @media (max-width: 768px) {
+            &:first-child {
+                margin-bottom: 120px;
+            }
+        }
+    }
+    &__content {
+        padding: 200px 0 150px;
+        background: linear-gradient(#fbfbfb, #fff);
+        @media (max-width: 768px) {
+            padding: 160px 0 100px;
+        }
+        @media (max-width: 768px) {
+            padding: 120px 0 80px;
+        }
+    }
+    &__block {
+        background: transparent;
+        position: relative;
+        box-shadow: 0px 0px 18px 1px #00000040;
+        @media (min-width: 881px) {
+            &:first-child {
+                margin-bottom: 200px;
+            }
+        }
+        @media (max-width: 880px) {
+            &:first-child {
+                margin-bottom: 180px;
+            }
+        }
+        @media (max-width: 768px) {
+            &:first-child {
+                margin-bottom: 120px;
+            }
+        }
+        @media (min-width: 426px) {
+            width: 370px;
+        }
+        &-photo {
+            padding-bottom: 20px;
+            position: absolute;
+            left: 50%;
+            bottom: 120px;
+            transform: translate(-50%, 0);
+            width: 100%;
+            & img {
+                display: block;
+                margin: 0px auto;
+                width: 70%;
+                @media (max-width: 425px) {
+                    width: 75%;
+                }
+            }
+        }
+        &-text {
+            padding: 330px 20px 20px;
+        }
+        &-name {
+            font-size: 28px;
+            font-weight: 500;
+            @media (min-width: 426px) {
+                padding: 40px 0 15px;
+            }
+            @media (max-width: 425px) {
+                padding-bottom: 15px;
+            }
+        }
+        &-post {
+            font-size: 19px;
+            color: #2E2E2E;
+            font-weight: 400;
+        }
+    }
+}
